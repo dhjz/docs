@@ -34815,5 +34815,9 @@ Last updated 2016-08-18 20:18:48 中国标准时间
   Array.from(document.querySelectorAll('img[img-src]')).forEach(function(item) {
     observer.observe(item)
   })
+
+  document.querySelectorAll('a').forEach(item => {
+    if (item.host != location.host) item.setAttribute('target', '_blank')
+  })
 </script>
 </body></html>
